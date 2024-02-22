@@ -1,5 +1,7 @@
 
-Command line tool to print MD5 / SHA1 / SHA256 fingerprints of Android APK package.
+A python command line tool to print fingerprints (md5 / sha1 / sha256) of Android APK package.
+
+[中文版 README](README.zh.md)
 
 # Why we need it? #
 
