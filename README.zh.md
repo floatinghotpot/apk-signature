@@ -76,11 +76,13 @@ keytool -printcert -file CERT.RSA
 
 使用 openssl 这个超级牛X 的密码工具箱，我们可以从 CERT.RSA 文件中提取出 签名证书（也就是PKI证书的公钥），并提取出指纹。
 
-经过推敲，用如下的一系列命令，就能够打印出签名证书的指纹：
+经过推敲，用如下的一系列命令，就能够打印出签名证书的指纹。
+
 方法一：直接读取 keystore 的证书：
 ```bash
 keytool -exportcert -keystore xxx.keystore | openssl dgst -md5
 ```
+
 方法二，从 APK 包中提取证书：
 ```bash
 # unzip the IPA file to tmp folder
